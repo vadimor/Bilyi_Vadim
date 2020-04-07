@@ -3,7 +3,7 @@
 void Ccooperator::setName(string name) {
 	this->name = name;
 }
-string Ccooperator::getName() {
+const string Ccooperator::getName() {
 	return this->name;
 }
 void Ccooperator::setId(const int id) {
@@ -30,7 +30,10 @@ Ccooperator::Ccooperator() :id(0), age(0), salary(0), name("Ivan") {
 }
 Ccooperator::Ccooperator(const Ccooperator& a) :id(a.id), age(a.age), salary(a.salary), name(a.name) {
 	cout << "\nБыл вызван конструктор по умолчанию в обекте с id: " << id<<"\n";
-}; 
-Ccooperator::Ccooperator(int a , int b , int c , const char* d ) :id(a), age(b), salary(c), name(d) {
+}
+Ccooperator::Ccooperator(int a , int b , int c , string d ) :id(a), age(b), salary(c), name(d) {
 	cout << "\nБыл вызван конструктор по умолчанию в обекте с id: " << id<<"\n";
-};
+}
+Ccooperator::~Ccooperator() {
+
+}

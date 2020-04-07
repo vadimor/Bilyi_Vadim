@@ -11,7 +11,8 @@ using std::cout;
 using std::ifstream;
 int main() {
 	setlocale(LC_ALL, "rus");
-	CList List;
+	{Ccooperator a;
+	/*CList List;
 	List.creatMass(0);
 	List.AddWhithString();
 	cout << List.findCooperator(20);
@@ -19,7 +20,7 @@ int main() {
 	List.writeToFile("File1.txt");
 	List.showAll();
 
-	List.End();
+	List.End();*/
 
 
 	/*
@@ -48,7 +49,7 @@ int main() {
 	Ccooperator testCop = Obj5;
 	printf("ID: %i\n Age: %i\n Salary: %i\n Name: %s\n", testCop.getId(), testCop.getAge(), testCop.getSalary(), testCop.getName());
 	*/
-
+	}
 	if (_CrtDumpMemoryLeaks())
 		cout << "\nMemory leack deteckted\n";
 	else

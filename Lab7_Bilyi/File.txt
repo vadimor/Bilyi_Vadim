@@ -1,0 +1,4 @@
+1 28 20000 68 Dima Larin 50 Iosiph Stalin 2
+2 24 12000 70 Luasal Di 39 Bill Bonc KIT
+3 23 23000 80 Lida Lan 55 Lol Lil 1
+4 43 22000 52 Ludvic Oncs 59 Dmitriy Fanser MIT

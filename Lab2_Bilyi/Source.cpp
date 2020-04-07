@@ -6,8 +6,8 @@
 using namespace std;
 int main() {
 	setlocale(LC_ALL, "rus");
-
-	CList List1;
+	Ccooperator a;
+	/*CList List1;
 	Ccooperator Obj2;
 	Ccooperator Obj3;
 	Ccooperator Obj4;
@@ -30,7 +30,7 @@ int main() {
 	printf("—редн€€ зарплата %i\n", List1.averageSalary());
 	List1.End();
 	Ccooperator testCop = Obj5;
-	printf("ID: %i\n Age: %i\n Salary: %i\n Name: %s\n", testCop.getId(), testCop.getAge(), testCop.getSalary(), testCop.getName());
+	printf("ID: %i\n Age: %i\n Salary: %i\n Name: %s\n", testCop.getId(), testCop.getAge(), testCop.getSalary(), testCop.getName());*/
 	if (_CrtDumpMemoryLeaks())
 		printf("\nMemory leack deteckted\n");
 	else
