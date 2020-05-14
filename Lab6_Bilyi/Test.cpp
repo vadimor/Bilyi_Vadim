@@ -76,9 +76,5 @@ int main() {
 	else {
 		printf("Тест 4 не пройден\n");
 	}
-	TestList.readFromFile("File.txt");
-	if (TestList.getAmount() == 3)
-		printf("Тест 5 пройден\n");
-	else
-		printf("Тест 5 не пройден\n");
+	TestList.End();
 }

@@ -12,7 +12,7 @@ private:
 
 	int id, age, salary;
 	string name;
-	Cchpi kaf;
+	Cchpi* kaf;
 	Cweight weight;
 	
 public:
@@ -20,16 +20,17 @@ public:
 	void setId(const int id);
 	void setAge(const int age);
 	void setSalary(const int salary);
-	void setKaf(const string kaf);
+	void setKaf(Cchpi* kaff);
 	void setWeight(const int w);
 	string getName();
 	int getId()const;
 	int getAge()const;
 	int getSalary()const;
 	string getKaf();
+	Cchpi* getAdresKaf();
 	int getWeight();
 	Ccooperator();
-	Ccooperator(int a, int b, int c, int d, const string i, const string f);
+	Ccooperator(int a, int b, int c, int d, Cchpi* i, const string f);
 	Ccooperator(const Ccooperator& a);
 	~Ccooperator() {};
 };

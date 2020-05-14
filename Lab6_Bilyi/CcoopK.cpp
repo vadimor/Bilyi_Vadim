@@ -11,14 +11,6 @@ string CcoopK::getmPlaiceWork() const
 }
 
 
-string CcoopK::getString()
-{
-	stringstream ss;
-	ss << "Id: " << id << "\nAge: " << age << "\nSalary: " << salary << "\nName: " << name;
-	ss << "Weight: " << weight.getWeigt() << "Name Rector: " << rect->getName() << "Age Rector: " << rect->getAge();
-	return ss.str();
-}
-
 CcoopK::CcoopK(): mPlaiceWork("Kafedra")
 {
 

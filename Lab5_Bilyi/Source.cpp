@@ -12,12 +12,13 @@ using std::cout;
 using std::ifstream;
 int main() {
 	setlocale(LC_ALL, "rus");
+	
 	CList List;
 	List.creatMass(0);
 	List.AddWhithString();
 	List.showAll();
 	List.End();
-
+	
 	if (_CrtDumpMemoryLeaks())
 		cout << "\nMemory leack deteckted\n";
 	else

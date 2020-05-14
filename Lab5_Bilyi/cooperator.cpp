@@ -12,14 +12,18 @@ void Ccooperator::setId(const int id) {
 void Ccooperator::setAge(const int age) {
 	this->age = age;
 }
-void Ccooperator::setKaf(const string kaff){
-	this->kaf.setName(kaff);
+void Ccooperator::setKaf(Cchpi* kaff){
+	this->kaf=kaff;
 }
 void Ccooperator::setWeight(const int w){
 	weight.setWeigt(w);
 }
 string Ccooperator::getKaf() {
-	return kaf.getName();
+	return kaf->getName();
+}
+Cchpi* Ccooperator::getAdresKaf()
+{
+	return kaf;
 }
 int Ccooperator::getWeight() {
 	return weight.getWeigt();
@@ -36,13 +40,13 @@ int Ccooperator::getAge()const {
 int Ccooperator::getSalary()const {
 	return this->salary;
 }
-Ccooperator::Ccooperator() :id(0), age(0), salary(0), weight(10),kaf("SOKOL"),name("Ivan") {
+Ccooperator::Ccooperator() :id(0), age(0), salary(0), weight(10),kaf(NULL),name("Ivan") {
 	cout << "\nБыл вызван конструктор по умолчанию в обекте с id: " << id<<"\n";
 
 }
 Ccooperator::Ccooperator(const Ccooperator& a) :id(a.id), age(a.age), salary(a.salary), weight(a.weight), kaf(a.kaf), name(a.name) {
 	cout << "\nБыл вызван конструктор по умолчанию в обекте с id: " << id<<"\n";
 }; 
-Ccooperator::Ccooperator(int a , int b , int c ,int d, const string i ,const string f) : id(a), age(b), salary(c), weight(d),kaf(i),name(f) {
+Ccooperator::Ccooperator(int a , int b , int c ,int d,Cchpi* i ,const string f) : id(a), age(b), salary(c), weight(d),kaf(i),name(f) {
 	cout << "\nБыл вызван конструктор по умолчанию в обекте с id: " << id<<"\n";
 };

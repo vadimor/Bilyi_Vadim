@@ -85,7 +85,7 @@ string CList::findCooperator(const int a) {
 	}
 }
 int CList::averageSalary() {
-	int averageSalary = 0;
+	auto averageSalary = 0;
 	for (std::size_t i = 0; i < amount; i++)
 	{
 		averageSalary = averageSalary + fEl[i].getSalary();
@@ -125,6 +125,7 @@ void CList::readFromFile(string fileName) {
 	);
 	std::cmatch result;
 	std::stringstream ss;
+	Cchpi* a;
 	while (getline(file, line)) {
 		
 		if (regex_match(line.c_str(), result, regular_main)) {
@@ -145,7 +146,9 @@ void CList::readFromFile(string fileName) {
 			ss.clear();
 			ss << result[5];
 			ss >> str;
-			temp.setKaf(str);
+			a = new Cchpi;
+			a->setName(str);
+			temp.setKaf(a);
 			for (std::size_t i = 6; i < result.size(); i++)
 			{
 				ss.clear();
@@ -194,7 +197,7 @@ void CList::AddWhithString() {
 		fEl1[i] = fEl[i];
 	}
 
-	std::cout << "\n¬ведите данные с клавиатуры в таком пор€дке: id, age, salary, name\n";
+	std::cout << "\n¬ведите данные с клавиатуры в таком пор€дке: id, age, salary, name,\n";
 	string tid = " ", tage = " ", tsalary = " ", tweight=" ", tkaf = " ",tname = " ";
 	int tid1;
 	string tname1 = " ";
@@ -221,7 +224,9 @@ void CList::AddWhithString() {
 	ss1.clear();
 	ss1 << tkaf;
 	ss1 >> tname;
-	temp.setKaf(tname);
+	Cchpi* a=new Cchpi;
+	a->setName(tname);
+	temp.setKaf(a);
 	fEl1[amount] = temp;
 	delete[] fEl;
 	amount++;
@@ -273,5 +278,9 @@ void CList::showAll() {
 	}
 }
 void CList::End() {
+	for (int i = 0; i < amount; i++) {
+		if(fEl1[i].getAdresKaf())
+		delete fEl[i].getAdresKaf();
+	}
 	delete[] fEl;
 }

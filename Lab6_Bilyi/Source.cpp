@@ -15,19 +15,16 @@ using std::ifstream;
 void menu();
 int main() {
 	setlocale(LC_ALL, "rus");
-	menu();
-	/*CList List;
-	List.creatMass(0);
-	List.AddWhithString();
-	List.showAll();
-	List.End();
-	*/
+	{ListK a;
+	a.Creatmass(0);
+	CcoopK b;
+	a.addNewEl(b);
+	a.Delete(0);
+	a.End(); }
 	if (_CrtDumpMemoryLeaks())
 		cout << "\nMemory leack deteckted\n";
 	else
 		cout << "\nMemory is not leack deteckted\n";
-}
-
-void menu() {
 
 }
+
