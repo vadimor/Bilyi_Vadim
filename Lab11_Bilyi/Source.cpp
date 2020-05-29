@@ -1,5 +1,6 @@
 #include "CList.cpp"
-#include "CMyClass.h"
+#include "C_Rgz.h"
+#include "C_RgzM.h"
 struct MYTYPE {
 	string ch;
 
@@ -26,22 +27,39 @@ bool operator>(MYTYPE& a, MYTYPE& b) {
 };
 int main() {
 	{
-		CMyClass w;
-		MYTYPE b [4] = { "A","B","C","D" };
-		CList <MYTYPE*, float, MYTYPE> a(b,4);
-		MYTYPE c;
-		c.ch= "C";
-		cout << a.index(c)<<endl;
+		C_Rgz obj1("Math");
+		C_RgzM obj2("Art",10);
+		C_Rgz obj3("Algoritmh");
+		C_Rgz** a= new C_Rgz*[6];
+		for (size_t i = 0; i < 3; i++) {
+			a[i] = new C_Rgz;
+			*a[i] = obj1;
+		}
+		for (size_t i = 3; i < 6; i++) {
+			a[i] = new C_RgzM;
+			*a[i] = obj2;
+		}
+		*a[2] = obj3;
+		CList <C_Rgz> b(a);
+		
+
+		cout << b.index(obj3,6)<<endl;
 		cout << endl;
-		a.showMass();
+		b.showMass(6);
 		cout << endl;
-		a.sortMass();
-		a.showMass();
+		b.sortMass(6);
+		b.showMass(6);
 		cout << endl;
-		cout << a.minEl();
+		cout << b.minEl(6).getString();
+		for (size_t i = 0; i < 6; i++)
+		{
+			delete a[i];
+		}
+		delete a;
 	}
 	if (_CrtDumpMemoryLeaks())
 		cout << "\nMemory leack deteckted\n";
 	else
 		cout << "\nMemory is not leack deteckted\n";
+
 }

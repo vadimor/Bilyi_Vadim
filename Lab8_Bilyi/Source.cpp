@@ -35,7 +35,7 @@ int main() {
 	Clist list;
 	cin >> list;
 	cout << list;
-	/*ifstream file;
+	ifstream file;
 	file.open("File.txt");
 	if (!file.is_open())
 	{
@@ -48,7 +48,7 @@ int main() {
 	file >> list;
 	file >> list;
 	cout << list;
-	*/
+	
 	list.EndEnd();
 
 }

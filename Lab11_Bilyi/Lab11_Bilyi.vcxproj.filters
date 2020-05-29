@@ -27,12 +27,24 @@
     <ClCompile Include="CMyClass.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="C_Rgz.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="C_RgzM.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CList.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="CMyClass.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Rgz.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="C_RgzM.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

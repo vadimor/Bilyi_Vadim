@@ -13,7 +13,6 @@ using std::make_pair;
 void menu();
 C_Rgz* creatEl();
 int main() {
-
 	menu();
 	if (_CrtDumpMemoryLeaks())
 		cout << "\nMemory leack deteckted\n";

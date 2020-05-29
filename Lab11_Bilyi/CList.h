@@ -7,25 +7,18 @@ using std::ostream;
 using std::istream;
 using std::string;
 using std::ostream;
-template<class T1, class T2, class T3>
+template<class T>
 class CList
 {
 private:
-	T1 mass;
-	T2 size;
+	T** mass;
 public: 
-	T1 getMass();
-	T2 getSize();
-	void showMass();
-	T2 index(T3 el);
-	void sortMass();
-	T3 minEl();
-	CList();
-	CList(T1 m, T2 s);
-	~CList();
+	T** getMass();
+	void showMass(int size);
+	int index(T el, int size);
+	T* sortMass(int size);
+	T minEl(int size);
+	CList(T** mass);
+	~CList()= default;
 
 };
-
-
-
-
